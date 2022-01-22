@@ -1,13 +1,206 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+/* 
+====== 
+Variables 
+======
+*/
+:root {
+  --primaryLightColor: #ADC6FF;
+  --primaryColor: #3772FF;
+  --secondayColor: #DF2935;
+  --mainWhite: #fff;
+  --offWhite: #f7f7f7;
+  --mainBackground: #f1f5f8;
+  --mainOverlay: rgba(35, 10, 36, 0.4);
+  --mainBlack: #222;
+  --mainGrey: #ececec;
+  --darkGrey: #afafaf;
+
+  --mainTransition: all 0.3s linear;
+  --mainSpacing: 0.3rem;
+  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+  --mainBorderRadius: 0.25rem;
+  --smallWidth: 85vw;
+  --maxWidth: 40rem;
+  --fullWidth: 1170px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* 
+====== 
+Global Styles 
+======
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+   font-family: 'Open Sans', sans-serif;
+  color: var(--mainBlack);
+  background: var(--mainBackground);
+  line-height: 1.4;
+  font-size: 1rem;
+  font-weight: 300;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--slantedFont);
+  margin-bottom: 1.25rem;
+  letter-spacing: var(--mainSpacing);
+}
+p {
+  margin-bottom: 1.25rem;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: var(--mainBlack);
+}
+img {
+  width: 100%;
+  display: block;
+}
+
+/*
+Buttons
+*/
+
+.btn {
+  font: inherit;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: var(--primaryColor);
+  color: var(--offWhite);
+  border: 1px solid var(--primaryLightColor);
+  margin: 0 1rem;
+  text-align: center;
+  font-weight: bold;
+
+}
+
+.btn-container{
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.btn:hover {
+  background-color: var(--primaryLightColor);
+  border-color: var(--primaryColor);
+  color: var(--secondayColor);
+}
+
+.btn-gl {
+  margin-top: 1rem;
+  text-align: right;
+  font: inherit;
+  cursor: pointer;
+  background-color: var(--primaryColor);
+  color: var(--offWhite);
+  padding: 0.5rem 1.5rem;
+  border: 1px solid var(--primaryLightColor);
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.btn-gl:hover,
+.btn-gl:active {
+  background-color: var(--primaryLightColor);
+  border-color: var(--primaryColor);
+  color: var(--secondayColor);
+}
+
+/* 
+====== 
+Error
+======
+*/
+.error-page {
+  display: flex;
+  justify-content: center;
+}
+.error-container {
+  text-align: center;
+  text-transform: capitalize;
+}
+/* 
+====== 
+Players List 
+======
+*/
+
+.section {
+  padding: 5rem 0;
+}
+.section-title {
+  font-size: 2rem;
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacing);
+  text-align: center;
+  margin-bottom: 3.5rem;
+  margin-top: 1rem;
+}
+.player-center {
+  width: var(--smallWidth);
+  margin: 0 auto;
+  max-width: var(--fullWidth);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(338.8px, 1fr));
+  row-gap: 2rem;
+  column-gap: 2rem;
+  /* align-items: start; */
+}
+/* 
+====== 
+Player
+======
+*/
+
+.player {
+  background: var(--mainWhite);
+  margin-bottom: 2rem;
+  box-shadow: var(--lightShadow);
+  transition: var(--mainTransition);
+  display: grid;
+  grid-template-rows: 5fr 1fr 1fr;
+  border-radius: var(--mainBorderRadius);
+  justify-items: center;
+  align-content: center;
+}
+.player:hover {
+  box-shadow: var(--darkShadow);
+}
+.player img {
+  max-width: 50%;
+  max-height: auto;
+  border-top-left-radius: var(--mainBorderRadius);
+  border-top-right-radius: var(--mainBorderRadius);
+}
+
+.graph-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  padding: 2rem 10%; 
+}
+
+.center-items {
+  display: flex;
+  justify-content: center;
+
 }

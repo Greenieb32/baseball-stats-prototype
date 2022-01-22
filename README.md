@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# Baseball Stats Prototype
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is designed to be a prototype of an interactive tool to display Batting Average (AVG) and On-Base Plus Slugging (OPS) over time for any MLB player. For the purpose of this prototype those stats and other counting stats used to create AVG and OPS are displayed on the app for three player's 2018 MLB Season.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+Below is a listing of features developed for this prototype:
 
-### `npm start`
+### Player Summary Page
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+After selecting a player from the home screen, you are taken to the stats summary screen, where you can see the player’s totals for the 2018 season along with graphs displaying game by game changes in the players AVG and OPS. There are also links to take you to the pages for the below two features.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### AVG and OPS Graphs
 
-### `npm test`
+Separate pages were created to display both the AVG and OPS graphs. These pages were designed to allow the graphs to be larger and allow a slightly different view of the player's season compared to the summary page graphs.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Season Game Log
 
-### `npm run build`
+For people who just want to look at raw data, the season game log was included, which displays the players counting stats game by game as well as derived stats for each game and cumulative derived stats for the season to that point.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Future Improvements
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+These are features that were considered for the prototype but due to time and effort concerns, they are saved for any future releases of the app.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Monthly Stats
 
-### `npm run eject`
+Pages and views for monthly stats were considered, but the graphs and game log were chosen as I believe them to be better showings of a player’s AVG and OPS over time. A more fully built out version of this app would most likely include further breakdowns of the chosen stats. 
+### API Call Efficiency 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This prototype uses API calls to fetch data for the players as well as their game-by-game stats. Currently all these calls successfully fetch the required data but not in the most efficient manner. When data is being fetched none of it is stored, so the API is called every time the data is needed. Future improvements to this prototype would be to store data and only fetch if needed. 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Responsive Design
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Currently this prototype is designed with desktop web browsers in mind. A future improvement would be to improve how the data is displayed for all screen sizes including mobile phones and tablets, but for a prototype with this data a focus on desktop web browsers was chosen.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Technologies/Libraries Used
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- React
+- HTML/CSS
+- JavaScript
+- React Router 
+- React UUID
+- Recharts

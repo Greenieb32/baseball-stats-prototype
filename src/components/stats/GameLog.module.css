@@ -1,0 +1,60 @@
+container {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  padding: 0 5% 2rem 5%;
+}
+
+table.gameLog {
+  border: 1px solid #1c6ea4;
+  background-color: #eeeeee;
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+table.gameLog td,
+table.gameLog th {
+  border: 1px solid #aaaaaa;
+  padding: 3px 2px;
+}
+table.gameLog tbody td {
+  font-size: 13px;
+}
+table.gameLog tr:nth-child(even) {
+  background: #d0e4f5;
+}
+table.gameLog thead {
+  background: #df2935;
+  background: -moz-linear-gradient(top, #e75e67 0%, #e23e49 66%, #df2935 100%);
+  background: -webkit-linear-gradient(
+    top,
+    #e75e67 0%,
+    #e23e49 66%,
+    #df2935 100%
+  );
+  background: linear-gradient(to bottom, #e75e67 0%, #e23e49 66%, #df2935 100%);
+  border-bottom: 2px solid #444444;
+}
+table.gameLog thead th {
+  font-size: 15px;
+  font-weight: bold;
+  color: #ffffff;
+  border-left: 2px solid #d0e4f5;
+}
+table.gameLog thead th:first-child {
+  border-left: none;
+}
+
+table.gameLog tfoot td {
+  font-size: 14px;
+}
+table.gameLog tfoot .links {
+  text-align: right;
+}
+table.gameLog tfoot .links a {
+  display: inline-block;
+  background: #1c6ea4;
+  color: #ffffff;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
