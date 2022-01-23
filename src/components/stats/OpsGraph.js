@@ -5,7 +5,7 @@ import {
   YAxis,
   ResponsiveContainer,
   Tooltip,
-  Legend,
+  Label,
 } from "recharts";
 
 function OpsGraph(props) {
@@ -61,10 +61,11 @@ function OpsGraph(props) {
           bottom: 5,
         }}
       >
-        <XAxis dataKey="name" />
+        <XAxis>
+          <Label value="Games" offset={-7.5} position="bottom" />
+        </XAxis>
         <YAxis type="number" domain={[0, "dataMax"]} />
         <Tooltip cursor={{ stroke: "#DF2935" }} />
-        <Legend />
         <Line type="monotone" dataKey="ops" stroke="#3772FF" />
       </LineChart>
     </ResponsiveContainer>

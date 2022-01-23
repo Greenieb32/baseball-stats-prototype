@@ -33,6 +33,22 @@ This prototype uses API calls to fetch data for the players as well as their gam
 
 Currently this prototype is designed with desktop web browsers in mind. A future improvement would be to improve how the data is displayed for all screen sizes including mobile phones and tablets, but for a prototype with this data a focus on desktop web browsers was chosen.
 
+## Source Code Layout
+
+This section describes the layout of the source code and the purpose for each directory
+
+### Pages
+
+This directory includes all the pages that the app can be routed to using React Router. In the base of the directory is the Home and Error pages, and in the Players subdirectory is all the pages that display player information and stats.
+
+### Components
+
+This directory contains all the components used to make the above pages and some specific CSS styles used by these components. The Layout subdirectory contains base layout features that are used throughout the app. The Players subdirectory contains the components used to build the player listing on the home page. The Stats subdirectory contains all the components needed to generate the graphs and tables on the various player's stats pages
+
+### Store
+ 
+This directory currently houses the API call for the temporary token, in the future if data is being stored from other calls it could be used to house those API calls as well. 
+
 ## Technologies/Libraries Used
 
 - React
